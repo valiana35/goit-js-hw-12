@@ -22,7 +22,7 @@ export function renderImages(data) {
         </li>`;
     })
     .join("");
-    gallery.innerHTML = markup;
+    gallery.insertAdjacentHTML('beforeend', markup);
     let lightbox = new SimpleLightbox('.gallery a', { captionDelay: 250, });
     lightbox.on('show.simplelightbox', function () {
         lightbox.refresh();  
