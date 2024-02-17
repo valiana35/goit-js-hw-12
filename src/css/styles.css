@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     margin-top: 30px;
+    margin-bottom: 20px;
 }
 .form-input {
     width: 272px;
@@ -77,17 +78,21 @@ ul {
     flex-direction: column;
     align-items: center;
   }
+  .loaderStyle {
+    display: flex;
+    justify-content: center;
+  }
   .loader {
     width: 48px;
     height: 48px;
     border: 5px solid #FFF;
     border-bottom-color: #FF3D00;
     border-radius: 50%;
-    display: inline-block;
+    display: block;
     box-sizing: border-box;
     animation: rotation 1s linear infinite;
+    margin: 0 auto;
     }
-
     @keyframes rotation {
     0% {
         transform: rotate(0deg);
@@ -96,3 +101,22 @@ ul {
         transform: rotate(360deg);
     }
     } 
+    .loadBtn {
+      border-radius: 8px;
+      padding: 8px 16px;
+      width: 125px;
+      height: 40px;
+      background: #4e75ff;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: 0.04em;
+      color: #fff;
+      border: none;
+      display: block;
+      margin: 0 auto;              
+    }
+    .hidden {
+      display: none;
+  }
