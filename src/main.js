@@ -12,7 +12,7 @@ export const refs = {
 }
 
 let inputValue;
-let page = 1;
+let page;
 let maxHits;
 
 refs.form.addEventListener('submit', onFormSubmit);
@@ -24,6 +24,7 @@ async function onFormSubmit(event) {
     if (inputValue === "") {
         return;
     }
+    page = 1;
     refs.loader.classList.remove("hidden");
     try {
         const data = await fetchHits(inputValue, page);

@@ -28,8 +28,8 @@ function hitsTemplate(hits) {
 export function renderHits(hits) {
     const markup = hitsTemplate(hits);
     refs.gallery.insertAdjacentHTML("beforeend", markup);
-    let lightbox = new SimpleLightbox('.gallery a', { captionDelay: 250, });
-    lightbox.on('show.simplelightbox', function () {
-        lightbox.refresh();  
-    });
+    lightbox.refresh();
 }
+
+let lightbox = new SimpleLightbox(".gallery a", { captionDelay: 250, });
+lightbox.on('show.simplelightbox'); 
